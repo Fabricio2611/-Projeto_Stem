@@ -121,8 +121,38 @@ Manager:
 <Entrada>:
     ScrollView:
         BoxLayout:
+            orientation:'vertical'
             size_hint_y: None
-
+            height: 1200
+            spacing: 40
+            Button:
+                text:'*Aqui será aonde os comandos serão reconhecidos, e quais são os caminhos daplaca que serão usados nos seus projetos, além dos instrumentos utilizados, seu formato éarredondado, encaixando-se dentro de outros blocos que possuem caixas de texto.'
+                text_size: self.size
+                valign: 'top'
+            Button:
+                text:'*Como esta linguagem de blocos é utilizadas em projetos usando o Arduino, existem14 pinos comuns(contando o pino 0) e 6 analógicos(contando o pino analógico A0), alémdos pinos que distribuem e recebem energia elétrica.'
+                text_size: self.size
+                valign: 'top'
+            Button:
+                text: '*Agora alguns instrumentos comumente utilizados em projetos no Arduino quepodem ser reconhecidos usando linguagem em blocos:'
+                text_size: self.size
+                valign: 'top'
+            Button:
+                text: '-Mini Servo:'
+                text_size: self.size
+                valign: 'top'
+            Button:
+                text: '-Monitor Serial:'
+                text_size: self.size
+                valign: 'top'
+            Button:
+                text: '-Sensor de Distância Ultrasônico:'
+                text_size: self.size
+                valign: 'top'
+            Button:
+                text: '-Sensor de Temperatura:'
+                text_size: self.size
+                valign: 'top'
 
 <Medio>:
 	FloatLayout:
