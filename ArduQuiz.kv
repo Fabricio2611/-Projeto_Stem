@@ -1,0 +1,149 @@
+Manager:
+	Menu:
+		name:'menu'
+	Game:
+		name:'game'
+	Basico:
+		name:'basico'
+	Entrada:
+	    name:'entrada'
+	Saida:
+	    name:'saida'
+	Controle:
+	    name:'controle'
+	Matematica:
+	    name:'mat'
+	Variavel:
+	    name: 'variavel'
+	Comentario:
+	    name:'comentario'
+	Medio:
+		name:'medio'
+	Avancado:
+		name:'avancado'
+
+#<MenuButton@Button>:
+	#font_size:'50sp'
+	#background_normal:'menuButton.png'
+	#background_down:'menuButtonpressed.png'
+	#border: 90,90,90,90
+
+<Menu>:
+	BoxLayout:
+		canvas:
+			Color:
+				rgba:1,1,1,1
+			Rectangle:
+				size:self.size
+				pos:self.pos
+
+
+		orientation: 'vertical'
+		padding: '200dp', '50dp'
+		spacing:'100dp'
+		Widget:
+		BoxLayout:
+			padding:"100dp"
+			spacing:"150dp"
+			Button:
+				text:'Start'
+				on_press:
+				on_release:app.root.current = 'game'
+			Button:
+				text:'Exit'
+				on_press:
+				on_release:app.Stop()
+
+
+
+<Game>:
+	FloatLayout:
+		canvas:
+			Color:
+				rgba:1,0.9,1,1
+			Rectangle:
+				size:self.size
+				pos:self.pos
+		orientation: 'horizontal'
+		padding: '200dp', '50dp'
+		spacing:'100dp'
+		Widget:
+		BoxLayout:
+			padding:"100dp"
+			spacing:"150dp"
+			Button:
+				text:'Básico'
+				on_press:
+				on_release:app.root.current = 'basico'
+			Button:
+				text:'Médio'
+				on_press:
+				on_release:app.root.current = 'medio'
+			Button:
+				text:'AvanÇado'
+				on_press:
+				on_release:app.root.current = 'avancado'
+
+
+<Basico>:
+	FloatLayout:
+		canvas:
+			Color:
+				rgba:1,1,1,1
+			Rectangle:
+				size:self.size
+				pos:self.pos
+		orientation:'vertical'
+		padding: '200dp', '50dp'
+		spacing:'100dp'
+    BoxLayout:
+        orientation : 'vertical'
+        spacing: 40
+        Button:
+            text: 'Blocos de Entrada'
+            on_release: app.root.current='entrada'
+        Button:
+            text: 'Blocos de Saída'
+            on_release: app.root.current='saida'
+        Button:
+            text: 'Blocos de Controle'
+            on_release: app.root.current='controle'
+        Button:
+            text: 'Blocos Matemáticos'
+            on_release: app.root.current='mat'
+        Button:
+            text: 'Blocos para Variáveis'
+            on_release : app.root.current='variavel'
+        Button:
+            text: 'Blocos de Comentários'
+            on_release: app.root.current='comentario'
+
+<Entrada>:
+    ScrollView:
+        BoxLayout:
+            size_hint_y: None
+
+
+<Medio>:
+	FloatLayout:
+		canvas:
+			Color:
+				rgba:1,1,1,1
+			Rectangle:
+				size:self.size
+				pos:self.pos
+		orientation:'vertical'
+		padding: '200dp', '50dp'
+		spacing:'100dp'
+
+<Avancado>:
+	FloatLayout:
+		canvas:
+			Color:
+				rgba:1,1,1,1
+			Rectangle:
+				size:self.size
+				pos:self.pos
+		orientation:'vertical'
+		padding: '200dp', '50dp'
+		spacing:'100dp'
